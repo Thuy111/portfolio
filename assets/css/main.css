@@ -1,13 +1,5 @@
 
-/* Fonts */
-@font-face {
-  font-family: 'mongcho';
-  src: url('/font/mongcho-new.ttf')format('truetype');
-}
 
-body #resume, body .section-title, body .content, body footer {
-  font-family: 'mongcho' !important;
-}
 
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
