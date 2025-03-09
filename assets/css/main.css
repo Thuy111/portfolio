@@ -5,9 +5,6 @@
   src: url('/font/mongcho.ttf')format('truetype');
 }
 
-/* #resume,.section-title, .content, footer {
-  font-family: 'mongcho' !important;
-} */
 body #resume, body .section-title, body .content, body footer {
   font-family: 'mongcho' !important;
 }
