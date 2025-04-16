@@ -1,4 +1,12 @@
+/* font ---------------------------*/
+@font-face {
+  font-family: 'mongcho';
+  src: url('/font/mongcho-new.ttf')format('truetype');
+}
 
+body #resume, body .section-title, body .content, body footer,.modal {
+  font-family: 'mongcho' !important;
+}
 
 
 
@@ -73,7 +81,17 @@ h6 {
   color: #4CAF50;
 }
 
+html {
+  font-size: 18px;
+}
 
+h1 {
+  font-size: 2rem;  /* 2 * 18 = 36px */
+}
+
+p {
+  font-size: 1rem;  /* 1 * 18 = 18px */
+}
 
 /*--------------------------------------------------------------
 # Global Header
@@ -100,6 +118,12 @@ h6 {
   display: flex;
   justify-content: center;
   height: 300px;
+}
+
+.no-padding-left {
+  padding-left: 0;
+  margin-left: 100px;
+  text-align: left;
 }
 
 .header .profile-img img {
@@ -478,13 +502,13 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
+  font-size: 80px;
   font-weight: 700;
 }
 
 .hero p {
   margin: 5px 0 0 0;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .hero p span {
@@ -577,6 +601,10 @@ section,
   line-height: 0;
 }
 .about .section-title { margin-bottom: 20px;}
+
+.nameCard{
+  margin-top: 100px;
+}
 
 /*--------------------------------------------------------------
 # Stats Section
