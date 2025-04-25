@@ -1,14 +1,7 @@
 /* font ---------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-@font-face {
-  font-family: 'mongcho';
-  src: url('/../font/mongcho-new.ttf')format('truetype');
-}
 
-body #resume, body .section-title, body .content, body footer,.modal {
-  font-family: 'mongcho' !important;
-}
 
 .myName{
   font-family: 'Josefin Sans', sans-serif;
