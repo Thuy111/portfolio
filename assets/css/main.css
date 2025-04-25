@@ -1022,6 +1022,9 @@ section,
 .btn_down::before {
     content: "📂 ";
 }
+.btn_membervideo::before{
+  content: "🎞️ ";
+}
 
 /*--------------------------------------------------------------
 # Services Section
