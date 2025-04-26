@@ -385,7 +385,12 @@ p {
   .popup{ font-size: 15px !important;
     top: 0px !important;
   }
- 
+  .hero img {
+   
+    object-position: 80% center !important;
+   
+    
+  }
   
 }
 
@@ -487,7 +492,9 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   z-index: 1;
+  
 }
 
 .hero:before {
