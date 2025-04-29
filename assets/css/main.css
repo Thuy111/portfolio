@@ -523,7 +523,9 @@ section,
 
 .hero p span {
   letter-spacing: 1px;
-  border-bottom: 2px solid var(--accent-color);
+  /* border-bottom: 2px solid var(--accent-color); */
+  color: black;
+  background-color: blanchedalmond;
 }
 
 .hero .social-links {
