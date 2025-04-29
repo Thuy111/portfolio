@@ -1,10 +1,10 @@
 /* font ---------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 
 .myName{
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
 }
 .myMajor{
   font-family: 'Libre Baskerville', serif;
