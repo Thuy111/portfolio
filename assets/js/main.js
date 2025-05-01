@@ -4,7 +4,7 @@
   "use strict";
 
   /**
-   * Header toggle
+   * Header toggle- 모바일 NavBar 버튼
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
 
@@ -16,7 +16,7 @@
   headerToggleBtn.addEventListener('click', headerToggle);
 
   /**
-   * Hide mobile nav on same-page/hash links
+   * 어디 click 하면 toggle 닫음
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
@@ -27,30 +27,9 @@
 
   });
 
+  
   /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
-
-  /**
-   * Scroll top button
+   * Scroll top button - 위로 가는 화살표
    */
   let scrollTop = document.querySelector('.scroll-top');
 
@@ -71,7 +50,7 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
-   * Animation on scroll function and init
+   * Animation, page scroll 효과
    */
   function aosInit() {
     AOS.init({
@@ -84,7 +63,7 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Init typed.js
+   * Init typed.js, 글씨 움직이는 효과 (통역전공, 웹앱 개발)
    */
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
@@ -100,36 +79,7 @@
   }
 
   /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
-    });
-  });
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Init isotope layout and filters
+   * Portfolio Section - 메뉴
    */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
@@ -162,26 +112,7 @@
   });
 
   /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
-
-  window.addEventListener("load", initSwiper);
-
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
+   * NavBard의 icon를 click 하면 해당 상세내용 위치로 가기
    */
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
@@ -199,7 +130,7 @@
   });
 
   /**
-   * Navmenu Scrollspy
+   * Navmenu Scroll할 때 해당 내용 만나면 icon의 background 색깔 바꾸기
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
@@ -208,7 +139,7 @@
       if (!navmenulink.hash) return;
       let section = document.querySelector(navmenulink.hash);
       if (!section) return;
-      let position = window.scrollY + 300;
+      let position = window.scrollY + 450;
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
         navmenulink.classList.add('active');
